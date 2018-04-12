@@ -15,3 +15,14 @@ export function sortByTotal(arr){
 		return a['@attributes'].total - b['@attributes'].total;
 	});
 }
+
+//format currency
+const formatter = new Intl.NumberFormat(["en-US"], {  
+    style: "currency",  
+    currency: "USD",  
+    currencyDisplay: "symbol"
+});
+
+export function formatDollars(num){
+	return formatter.format(num);
+}
