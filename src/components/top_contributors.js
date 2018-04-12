@@ -35,6 +35,7 @@ export default class TopContributors extends Component {
 		const top_contributor_individuals = individuals_data[individuals_data.length - 1];
 		const top_contributor_pacs = pacs_data[pacs_data.length - 1];
 
+		//content for section next tot the graph
 		const contributor_content = `These are the top ten contributors to this campaign committee.  
 		Contributions are not generally given by these organizations directly, but rather by individuals associated with them (employees for example) and PACs established to collect donations from individuals associated with them.  
 		PACs, or political action committees, are organizations that collect and spend money in support of political candidates.  
