@@ -1,0 +1,86 @@
+.flag_container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $light_blue;
+	z-index: 1000;
+}
+
+.flag {
+	display: inline-block;
+}
+
+.flag_column {
+	width: 5px;
+	display: inline-block;
+	float: left;
+	margin-right: 2px;
+	animation: wave 1s infinite;
+	&::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@keyframes wave {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(12px);
+	}
+}
+
+@for $i from 1 through 19 {
+	.flag .flag_column:nth-child(#{$i}) {
+		animation-delay: -1s * ((19 - $i) / 19); 
+	}
+}
+
+.red,
+.white,
+.blue {
+	display: block;
+	float: left;
+	clear: right;
+	margin-bottom: 1px;
+	width: 5px;
+	height: 5px;
+}
+
+.red {
+	background: red;
+}
+
+.white {
+	background: white;
+}
+
+.blue {
+	background: blue;
+}
+
+.loader-enter {
+	opacity: 0;
+}
+
+.loader-enter-active {
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+
+.loader-exit {
+	opacity: 1;
+}
+
+.loader-exit-active {
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}

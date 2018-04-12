@@ -1,0 +1,120 @@
+input[type="search"] {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.search-container {
+    position: relative;
+
+    button {
+        height: 35px;
+        padding: 0 25px;
+        border: none;
+        background: $dark_blue;
+        color: $white;
+        display: inline-block;
+        vertical-align: bottom;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 550px){
+    .search-container {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.select-search-box {
+    display: inline-block;
+    min-width: 300px;
+}
+
+@media(max-width: 550px){
+    .select-search-box {
+        min-width: 0;
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+.select-search-box__search {
+    border-radius: 2px 0 0 2px;
+    height: 35px;
+    font-size: 18px;
+    width: 100%;
+    vertical-align: middle;
+    border: none;
+    padding-left: 10px;
+}
+
+/** The option list should not be visible by default */
+.select-search-box__select {
+    display: none;
+}
+ 
+/** If it's a multiple select, you can style it with this selector */
+.select-search-box--multiple .select-search-box__select {
+    display: block;
+}
+
+/** The list receives the modifier class "display" when the select has focus */
+.select-search-box__select--display {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: $light-shadow;
+}
+ 
+/** UL with the options */
+.select-search-box__options {
+    list-style: none;
+    padding-left: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+}
+ 
+/** The option (LI), look at the state classes below */
+.select-search-box__option {
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    border-bottom: 1px solid #d1d1d1;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
+ 
+/** When the option has been selected */
+.select-search-box__option--selected {
+    cursor: no-drop;
+}
+
+/** When the option is selected (when navigation with the arrow keys, up/down) */
+.select-search-box__option--hover, .select-search-box__option:hover {
+
+}
+
+.front_page {
+    .search-container {
+        button {
+            height: 50px;
+        }
+    }
+
+    .select-search-box__search {
+        height: 50px;
+
+        input[type="search"] {
+
+        }
+    }
+}

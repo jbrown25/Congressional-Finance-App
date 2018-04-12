@@ -1,0 +1,44 @@
+html,
+body {
+	height: 100%;
+	height: 100vh;
+}
+
+body {
+	background: $light_gray;
+	line-height: 1.45;
+	font-weight: 400;
+	font-family: $body_font;
+	font-size: $copy_fontsize;
+	color: $black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $heading_font;
+	margin: 1.414em 0 0.5em;
+	line-height: 1.2;
+	font-weight: inherit;
+}
+
+h1 {
+	font-size: $h1_fontsize;
+}
+
+h2 {
+	font-size: $h2_fontsize;
+}
+
+h3 {
+	font-size: $h3_fontsize;
+}
+
+h4 {
+	font-size: $h4_fontsize;
+}
+
+p {
+	margin-bottom: 1.3em;
+}
