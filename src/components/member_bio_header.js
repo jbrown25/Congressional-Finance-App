@@ -15,9 +15,9 @@ export default class MemberHeader extends Component {
 
 		const getSocialLinks = () => {
 			const socialLinks = [];
-			if(memberBio.twitter_account) socialLinks.push(<a href={`https://twitter.com/${memberBio.twitter_account}`}><i className='fa fa-twitter'></i></a>);
-			if(memberBio.facebook_account) socialLinks.push(<a href={`https://facebook.com/${memberBio.facebook_account}`}><i className='fa fa-facebook'></i></a>);
-			if(memberBio.youtube_account) socialLinks.push(<a href={`https://youtube.com/user/${memberBio.youtube_account}`}><i className='fa fa-youtube'></i></a>);
+			if(memberBio.twitter_account) socialLinks.push(<li><a href={`https://twitter.com/${memberBio.twitter_account}`}><i className='fa fa-twitter'></i></a></li>);
+			if(memberBio.facebook_account) socialLinks.push(<li><a href={`https://facebook.com/${memberBio.facebook_account}`}><i className='fa fa-facebook'></i></a></li>);
+			if(memberBio.youtube_account) socialLinks.push(<li><a href={`https://youtube.com/user/${memberBio.youtube_account}`}><i className='fa fa-youtube'></i></a></li>);
 			return socialLinks;
 		}
 
@@ -56,11 +56,16 @@ export default class MemberHeader extends Component {
 										<td>Phone:</td>
 										<td>{memberBio.phone}</td>
 									</tr>
+									<tr>
+										<td>Social Media:</td>
+										<td>
+											<ul className='social_links'>
+												{getSocialLinks()}
+											</ul>
+										</td>
+									</tr>
 								</tbody>
 							</table>
-							<ul className='social_links'>
-								{getSocialLinks()}
-							</ul>
 						</div>
 					</div>
 					<div className='member_finance_column'>
