@@ -12,7 +12,9 @@ class FrontPage extends Component {
 
 		return (
 			<section className='front_page'>
-				<h1>Congressional Finance App</h1>
+				<div className='text-center'>
+					<h1>Congressional Finance App</h1>
+				</div>
 				<CSSTransition
 					in={members.length < 1}
 					classNames='loader'
