@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Chart from 'chart.js';
-import {generateKey} from '../utils/index';
+import {generateKey, formatDollars} from '../utils/index';
 
 export default class HorizontalBarChart extends Component {
 	
@@ -40,6 +40,13 @@ export default class HorizontalBarChart extends Component {
                 scales: {
                 	yAxes: [{
                 		barThickness: 40
+                	}],
+                	xAxes: [{
+                		ticks: {
+                			callback: function(value, index, values){
+                				return formatDollars(value);
+                			}
+                		}
                 	}]
                 }
             }
