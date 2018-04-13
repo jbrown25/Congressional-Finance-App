@@ -9,16 +9,21 @@ import TopIndustries from '../components/top_industries';
 import TopSectors from '../components/top_sectors';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer.js';
+import FlagLoader from '../components/flag_loader';
+import {CSSTransition} from 'react-transition-group';
+
 
 class Member extends Component {
 
 	componentDidMount(){
-		//eventually, gonna have to map the names so url doesn't use crp_id
+		//request member data
 		const {crp_id} = this.props.match.params;
 		this.props.getMemberData(crp_id);
 	}
 
 	componentDidUpdate(prevProps){
+		//if path doesn't match current member, request member data with crp_id in path
+		//prevents rendering previous member
 		if(this.props.match.params.crp_id != prevProps.match.params.crp_id){
 			this.props.getMemberData(this.props.match.params.crp_id);
 		}
@@ -27,10 +32,10 @@ class Member extends Component {
 	render(){
 		const {member} = this.props;
 		const {members} = this.props;
+
+		const shouldRenderPage = member.length && member[3].data.response.summary['@attributes'].cid === this.props.match.params.crp_id;
 		
-		//checks if member exists and if ajax response matches the current url.  Way too long obv
-		if(member.length && member[3].data.response.summary['@attributes'].cid === this.props.match.params.crp_id){
-			//member found
+		const renderPage = () => {
 			const {contributor} = member[0].data.response.contributors;
 			const {industry} = member[1].data.response.industries;
 			const {sector} = member[2].data.response.sectors;
@@ -57,11 +62,20 @@ class Member extends Component {
 					</section>
 					<Footer />
 				</div>
-			);
+			);			
 		}
-		//put loading animation here
+
 		return (
-			<div>loading...</div>
+			<div>
+				<CSSTransition
+					in={!shouldRenderPage}
+					classNames='loader'
+					timeout={500}
+					unmountOnExit >
+					<FlagLoader />
+				</CSSTransition>
+				{ shouldRenderPage ? renderPage() : <div>Loading... </div> }
+			</div>
 		);
 	}
 }
