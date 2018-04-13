@@ -114,6 +114,10 @@
 	box-shadow: $light_shadow;
 	padding: $gutter;
 	box-sizing: border-box;
+
+	h3 {
+		margin-top: 0.75em;
+	}
 }
 
 .member_topic_chart_column {
