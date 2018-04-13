@@ -13,6 +13,14 @@ export default class MemberHeader extends Component {
 		const {cash_on_hand} = memberFinances['@attributes'];
 		const {debt} = memberFinances['@attributes'];
 
+		const getSocialLinks = () => {
+			const socialLinks = [];
+			if(memberBio.twitter_account) socialLinks.push(<a href={`https://twitter.com/${memberBio.twitter_account}`}><i className='fa fa-twitter'></i></a>);
+			if(memberBio.facebook_account) socialLinks.push(<a href={`https://facebook.com/${memberBio.facebook_account}`}><i className='fa fa-facebook'></i></a>);
+			if(memberBio.youtube_account) socialLinks.push(<a href={`https://youtube.com/user/${memberBio.youtube_account}`}><i className='fa fa-youtube'></i></a>);
+			return socialLinks;
+		}
+
 		return (
 			<div className='container'>
 				<div className='member_bio_container'>
@@ -26,18 +34,33 @@ export default class MemberHeader extends Component {
 									</tr>
 									<tr>
 										<td>Party:</td>
-										<td>{`${memberBio.party}`}</td>
+										<td>{memberBio.party}</td>
 									</tr>
 									<tr>
 										<td>District:</td>
 										<td>{`${memberBio.state} ${memberBio.district}`}</td>
 									</tr>
 									<tr>
+										<td>Date of Birth:</td>
+										<td>{memberBio.date_of_birth}</td>
+									</tr>
+									<tr>
 										<td>Votes with party:</td>
 										<td>{`${memberBio.votes_with_party_pct}%`}</td>
 									</tr>
+									<tr>
+										<td>Office:</td>
+										<td>{memberBio.office}</td>
+									</tr>
+									<tr>
+										<td>Phone:</td>
+										<td>{memberBio.phone}</td>
+									</tr>
 								</tbody>
 							</table>
+							<ul className='social_links'>
+								{getSocialLinks()}
+							</ul>
 						</div>
 					</div>
 					<div className='member_finance_column'>
