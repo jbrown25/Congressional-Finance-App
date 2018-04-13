@@ -3,22 +3,6 @@ import Chart from 'chart.js';
 import {generateKey, formatDollars} from '../utils/index';
 
 export default class StackedBarChart extends Component {
-
-	constructor(props){
-		super(props);
-
-		this.state = {
-			thing: {}
-		}
-
-		this.storeThings = this.storeThings.bind(this);
-	}
-
-	storeThings(item){
-		this.setState({
-			thing: item
-		});
-	}
 	
 	componentDidMount(){
 		this.renderChart();
