@@ -40,7 +40,7 @@ export default class TopSectors extends Component {
 		Contributions are given by individuals and PACs associated with these sectors.
 		PACs, or political action committees, are organizations that collect and spend money in support of political candidates.  
 		Individuals are generally limited to $2,700 per federal candidate per election, while PACs can contribute up to $5,000.  
-		For example, the sector from which this campaign committe receives the most contributions from is ${top_sector_name}.  
+		The sector from which this campaign committe receives the most contributions from is ${top_sector_name}.  
 		They received ${formatDollars(top_sector_individuals)} from individuals and ${formatDollars(top_sector_pacs)} from PACs, for a total of ${formatDollars(top_sector_pacs + top_sector_individuals)}`;
 
 
@@ -48,6 +48,7 @@ export default class TopSectors extends Component {
 			<div className='member_topic_container'>
 				<div className='member_topic_content_column'>
 					<div className='member_topic_content'>
+						<h3>Top Sectors</h3>
 						<p>{sector_content}</p>
 					</div>
 				</div>

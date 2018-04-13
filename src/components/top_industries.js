@@ -40,13 +40,14 @@ export default class TopIndustries extends Component {
 		Contributions are given by individuals and PACs associated with these industries.
 		PACs, or political action committees, are organizations that collect and spend money in support of political candidates.  
 		Individuals are generally limited to $2,700 per federal candidate per election, while PACs can contribute up to $5,000.  
-		For example, the industry from which this campaign committe receives the most contributions from is ${top_industry_name}.  
+		The industry from which this campaign committe receives the most contributions from is ${top_industry_name}.  
 		They received ${formatDollars(top_industry_individuals)} from individuals and ${formatDollars(top_industry_pacs)} from PACs, for a total of ${formatDollars(top_industry_pacs + top_industry_individuals)}`;
 
 		return (
 			<div className='member_topic_container'>
 				<div className='member_topic_content_column'>
 					<div className='member_topic_content'>
+						<h3>Top Industries</h3>
 						<p>{industry_content}</p>
 					</div>
 				</div>
