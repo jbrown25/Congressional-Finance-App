@@ -38,5 +38,5 @@ export function getMemberData(crp_id){
 	return {
 		type: GET_MEMBER_DATA,
 		payload: member_request
-	}
+	};
 }
