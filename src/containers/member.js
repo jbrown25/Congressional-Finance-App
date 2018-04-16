@@ -30,9 +30,9 @@ class Member extends Component {
 	}
 
 	render(){
-		const {member} = this.props;
-		const {members} = this.props;
+		const {member, members} = this.props;
 
+		//have member, member id in data matches member id in path
 		const shouldRenderPage = member.length && member[3].data.response.summary['@attributes'].cid === this.props.match.params.crp_id;
 		
 		const renderPage = () => {

@@ -4,14 +4,9 @@ import HorizontalBarChart from './horizontal_bar_chart';
 export default class MemberHeader extends Component {
 
 	render(){
-		//need to check if these exist before rendering.
 
-		const {memberBio} = this.props;
-		const {memberFinances} = this.props;
-		const {total} = memberFinances['@attributes'];
-		const {spent} = memberFinances['@attributes'];
-		const {cash_on_hand} = memberFinances['@attributes'];
-		const {debt} = memberFinances['@attributes'];
+		const {memberBio, memberFinances} = this.props;
+		const {total, spent, cash_on_hand, debt} = memberFinances['@attributes'];
 
 		const getSocialLinks = () => {
 			const socialLinks = [];
