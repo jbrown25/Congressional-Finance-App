@@ -9,6 +9,7 @@ class FrontPage extends Component {
 
 	render(){
 		const {members} = this.props;
+		console.log(members);
 
 		return (
 			<section className='front_page'>

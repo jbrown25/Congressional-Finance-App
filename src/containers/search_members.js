@@ -44,7 +44,7 @@ class SearchMembers extends Component {
 	render(){
 		const {members} = this.props;
 
-		if(!members.length){
+		if(members.length === 0){
 			return (
 				<div>Getting Members.</div>
 			);

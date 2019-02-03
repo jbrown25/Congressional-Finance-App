@@ -10,9 +10,9 @@ export default class MemberHeader extends Component {
 
 		const getSocialLinks = () => {
 			const socialLinks = [];
-			if(memberBio.twitter_account) socialLinks.push(<li><a href={`https://twitter.com/${memberBio.twitter_account}`}><i className='fa fa-twitter'></i></a></li>);
-			if(memberBio.facebook_account) socialLinks.push(<li><a href={`https://facebook.com/${memberBio.facebook_account}`}><i className='fa fa-facebook'></i></a></li>);
-			if(memberBio.youtube_account) socialLinks.push(<li><a href={`https://youtube.com/user/${memberBio.youtube_account}`}><i className='fa fa-youtube'></i></a></li>);
+			if(memberBio.twitter_account) socialLinks.push(<li key={0}><a href={`https://twitter.com/${memberBio.twitter_account}`}><i className='fa fa-twitter'></i></a></li>);
+			if(memberBio.facebook_account) socialLinks.push(<li key={1}><a href={`https://facebook.com/${memberBio.facebook_account}`}><i className='fa fa-facebook'></i></a></li>);
+			if(memberBio.youtube_account) socialLinks.push(<li key={2}><a href={`https://youtube.com/user/${memberBio.youtube_account}`}><i className='fa fa-youtube'></i></a></li>);
 			return socialLinks;
 		}
 
