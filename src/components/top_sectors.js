@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import StackedBarChart from './stacked_bar_chart';
-import {sortByTotal, formatDollars} from '../utils/index';
+import {sortByTotal, formatDollars} from '../utils';
 
 export default class TopSectors extends Component {
 

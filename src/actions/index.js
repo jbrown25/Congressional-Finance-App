@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const ROOT_URL = 'https://9t8ly6d6b9.execute-api.us-west-2.amazonaws.com/dev';
+import {ROOT_URL} from '../config';
 
 export const GET_MEMBERS = 'get_members';
 export const GET_MEMBER_DATA = 'get_member';

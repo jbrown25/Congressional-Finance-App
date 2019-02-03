@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import Body from './components/body';
-import {getMembers} from './actions/index';
+import Body from './body';
+import {getMembers} from '../actions';
 import {connect} from 'react-redux';
 
 class App extends Component {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Chart from 'chart.js';
-import {generateKey, formatDollars} from '../utils/index';
+import {generateKey, formatDollars} from '../utils';
 
 export default class StackedBarChart extends Component {
 	

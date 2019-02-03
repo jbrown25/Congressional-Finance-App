@@ -1,4 +1,4 @@
-import { GET_MEMBER_DATA } from '../actions/index';
+import { GET_MEMBER_DATA } from '../actions';
 
 export default function(state=[], action){
 	switch(action.type){

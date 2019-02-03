@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Switch, Route} from 'react-router-dom';
-import {getMemberData} from '../actions/index';
-import TopBar from '../components/top_bar';
-import MemberBioHeader from '../components/member_bio_header';
-import TopContributors from '../components/top_contributors';
-import TopIndustries from '../components/top_industries';
-import TopSectors from '../components/top_sectors';
-import Navigation from '../components/navigation';
-import Footer from '../components/footer.js';
-import FlagLoader from '../components/flag_loader';
+import {getMemberData} from '../actions';
+import TopBar from './top_bar';
+import MemberBioHeader from './member_bio_header';
+import TopContributors from './top_contributors';
+import TopIndustries from './top_industries';
+import TopSectors from './top_sectors';
+import Navigation from './navigation';
+import Footer from './footer.js';
+import FlagLoader from './flag_loader';
 import {CSSTransition} from 'react-transition-group';
 
 

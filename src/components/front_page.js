@@ -2,14 +2,13 @@ import React, {Component} from 'react';
 import SearchMembers from './search_members';
 import {connect} from 'react-redux';
 import {CSSTransition} from 'react-transition-group';
-import FlagLoader from '../components/flag_loader';
+import FlagLoader from './flag_loader';
 import {withRouter} from 'react-router-dom';
 
 class FrontPage extends Component {
 
 	render(){
 		const {members} = this.props;
-		console.log(members);
 
 		return (
 			<section className='front_page'>

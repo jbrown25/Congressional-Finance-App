@@ -19,6 +19,7 @@ class SearchMembers extends Component {
 
 	//format the array of members for the searchbar
 	formatMembers(memb){
+
 		//filter out entries without crp_ids or who aren't in office
 		const filteredMembers = memb.filter((memb) => memb.crp_id != null && memb.in_office);
 		

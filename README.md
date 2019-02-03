@@ -1,9 +1,68 @@
-# Congressional Finance App
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Web app for viewing campaign finance data for members of the US House of Representatives.  Live version is currently hosted in [an S3 bucket](http://congressional-finance-app.s3-website-us-west-2.amazonaws.com/) with static website hosting enabled.
+## Available Scripts
 
-Made with [Simple React Webpack Babel Starter Kit](https://github.com/ReactJSResources/react-webpack-babel), [React](https://reactjs.org/) and [Redux](https://redux.js.org/).  Uses [Chart.js](https://www.chartjs.org/), [React Transition Group](https://github.com/reactjs/react-transition-group), [Axios](https://www.npmjs.com/package/axios), [normalize.css](https://necolas.github.io/normalize.css/).  Data courtesy of the [Center for Responsive Politics](https://opensecrets.org) and [Propublica](https://www.propublica.org/datastore/apis).
+In the project directory, you can run:
 
-The app makes ajax calls to an [AWS API Gateway endpoint](https://aws.amazon.com/api-gateway/), which triggers [this AWS Lambda function](https://github.com/jbrown25/congressional-finance-serverless) that retrieves the data from the OpenSecrets and Propublica APIs. 
+### `npm start`
 
-American flag loading animation can be viewed [here](https://codepen.io/jbrown25/full/MVRyvM/).  It is my personal favorite part of this project.
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

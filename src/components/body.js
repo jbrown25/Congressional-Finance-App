@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Member from '../containers/member';
-import FrontPage from '../containers/front_page';
+import Member from './member';
+import FrontPage from './front_page';
 
 const Body = () => {
 	return (

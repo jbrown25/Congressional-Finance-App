@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchMembers from '../containers/search_members';
+import SearchMembers from './search_members';
 import {Link} from 'react-router-dom';
 
 const TopBar = () => {
